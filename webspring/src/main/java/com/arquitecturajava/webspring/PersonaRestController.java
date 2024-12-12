@@ -23,6 +23,6 @@ public class PersonaRestController {
 
 	@GetMapping
 	public List<PersonaDto> buscarTodos() {
-		return (List<PersonaDto>) servicio.buscarTodos().stream().map((p)->new PersonaDto(p.getNombre()));
+		return (List<PersonaDto>) servicio.buscarTodos().stream().map((p)->new PersonaDto(p.getNombre().toUpperCase()));
 	}
 }
