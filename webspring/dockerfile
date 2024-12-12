@@ -1,0 +1,4 @@
+FROM openjdk:17-jdk-alpine
+COPY target/webspring-1.jar webspring-1.jar
+ENTRYPOINT ["java","-jar","/webspring-1.jar"]
+EXPOSE 8083

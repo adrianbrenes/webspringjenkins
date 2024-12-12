@@ -1,0 +1,4 @@
+docker build --tag=webspring .
+docker images
+docker run -p 8083:8083 webspring
+docker ps -a
