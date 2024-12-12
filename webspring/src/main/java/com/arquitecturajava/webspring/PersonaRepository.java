@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.arquitecturajava.webspring.models.Persona;
+
 @Component
 public class PersonaRepository {
 
