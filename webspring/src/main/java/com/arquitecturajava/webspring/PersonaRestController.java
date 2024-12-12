@@ -1,6 +1,7 @@
 package com.arquitecturajava.webspring;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +23,7 @@ public class PersonaRestController {
 	}
 
 	@GetMapping
-	public List<PersonaDto> buscarTodos() {
-		return (List<PersonaDto>) servicio.buscarTodos().stream().map((p)->new PersonaDto(p.getNombre().toUpperCase()));
+	public Stream<Object> buscarTodos() {
+		return servicio.buscarTodos().stream().map((p)->new PersonaDto(p.getNombre().toUpperCase()));
 	}
 }
