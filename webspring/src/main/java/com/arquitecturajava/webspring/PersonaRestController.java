@@ -1,6 +1,5 @@
 package com.arquitecturajava.webspring;
 
-import java.util.List;
 import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
